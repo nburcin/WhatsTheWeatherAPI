@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatsTheWeatherAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nasa-63030-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GGT-Ag-WIC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT'S THE WEATHER?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQR-0b-mFY">
+                                <rect key="frame" x="16" y="20" width="343" height="38.5"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EF0-K0-9qa">
+                                <rect key="frame" x="48" y="157" width="279" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oBA-er-gqY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08g-qr-40S">
+                                <rect key="frame" x="32" y="207" width="311" height="40"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YPH-9X-mSe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE4-VE-WS3">
+                                <rect key="frame" x="16" y="287" width="343" height="23.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a city!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hg-mE-xsx">
+                                <rect key="frame" x="32" y="98.5" width="311" height="38.5"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="08g-qr-40S" firstAttribute="top" secondItem="EF0-K0-9qa" secondAttribute="bottom" constant="20" id="BZd-tb-sDR"/>
+                            <constraint firstItem="lE4-VE-WS3" firstAttribute="top" secondItem="08g-qr-40S" secondAttribute="bottom" constant="40" id="ECY-da-rdP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0hg-mE-xsx" secondAttribute="trailing" constant="32" id="FdE-nR-fPP"/>
+                            <constraint firstItem="QQR-0b-mFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Gd7-bf-QIr"/>
+                            <constraint firstItem="EF0-K0-9qa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Hwg-3i-YkN"/>
+                            <constraint firstItem="08g-qr-40S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="PCy-bb-RU2"/>
+                            <constraint firstItem="GGT-Ag-WIC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PNx-bU-E7b"/>
+                            <constraint firstItem="0hg-mE-xsx" firstAttribute="top" secondItem="QQR-0b-mFY" secondAttribute="bottom" constant="40" id="XCm-7O-wjW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="08g-qr-40S" secondAttribute="trailing" constant="32" id="YhJ-wX-Yu3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EF0-K0-9qa" secondAttribute="trailing" constant="48" id="eDU-bZ-U5x"/>
+                            <constraint firstItem="QQR-0b-mFY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="f87-Ok-aCY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QQR-0b-mFY" secondAttribute="trailing" constant="16" id="ggP-f1-iS6"/>
+                            <constraint firstItem="EF0-K0-9qa" firstAttribute="top" secondItem="0hg-mE-xsx" secondAttribute="bottom" constant="20" id="haY-ab-792"/>
+                            <constraint firstItem="lE4-VE-WS3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jFN-vQ-J9b"/>
+                            <constraint firstItem="0hg-mE-xsx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="kD4-M3-bzo"/>
+                            <constraint firstItem="GGT-Ag-WIC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nyR-XO-tA6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lE4-VE-WS3" secondAttribute="trailing" constant="16" id="pRr-qy-G2Z"/>
+                            <constraint firstItem="GGT-Ag-WIC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rtQ-Yp-Rka"/>
+                            <constraint firstItem="GGT-Ag-WIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uEn-ma-WLe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="0hg-mE-xsx" id="LZm-ml-eg3"/>
+                        <outlet property="enterButton" destination="08g-qr-40S" id="Lgj-yG-F7E"/>
+                        <outlet property="resultLabel" destination="lE4-VE-WS3" id="S9V-qa-63P"/>
+                        <outlet property="textField" destination="EF0-K0-9qa" id="Jl1-9S-u3b"/>
+                        <outlet property="titleLabel" destination="QQR-0b-mFY" id="i8E-wi-Yqu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nasa-63030-unsplash.jpg" width="1080" height="1389"/>
+    </resources>
+</document>
